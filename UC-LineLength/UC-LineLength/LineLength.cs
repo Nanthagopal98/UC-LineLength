@@ -24,7 +24,18 @@ namespace UC_LineLength
                 length[i] = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
                 Console.WriteLine(length[i]);
             }
-            Console.WriteLine("Both lines with same length is " + length[1].Equals(length[0]));
+            if (length[0] == length[1])
+            {
+                Console.WriteLine("Both lines with same length is " + length[1].Equals(length[0]));
+            }
+            else if (length[0] < length[1])
+            {
+                Console.WriteLine("Length of lines 2 is longer");
+            }
+            else
+            {
+                Console.WriteLine("Length of lines 1 is longer");
+            }
         }
     }
 }
